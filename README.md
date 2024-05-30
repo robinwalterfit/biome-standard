@@ -8,8 +8,10 @@ A port of the StandardJS ESLint configuration to Biome.
 
 ## Installation / Getting Started
 
+Run the following command to install the Biome configuration:
+
 ```bash
-npm install git+ssh://git@github.com:npm/cli.git#v0.1.0
+npm install git+ssh://git@github.com:robinwalterfit/biome-standard.git#v0.1.0
 ```
 
 ## Deployment
@@ -36,7 +38,12 @@ used to generate this Biome configuration.
 
 ### Dependencies
 
-Run `npm install --save-dev eslint-config-love@51.0.1 eslint-config-standard@17.1.0 eslint-config-standard-jsx@11.0.0 eslint-config-standard-react@13.0.0`
+Run
+
+```bash
+npm install --save-dev eslint-config-love@51.0.1 eslint-config-standard@17.1.0 eslint-config-standard-jsx@11.0.0 eslint-config-standard-react@13.0.0
+```
+
 and find the packages in `node_modules`. Copy the ESLint configuration to the
 root directory, name it `.eslintrc.json` and run `biome migrate` one by one.
 
