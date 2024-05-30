@@ -20,7 +20,8 @@ lint:
   commands:
     biome-lint:
       glob: "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}"
-      run: biome lint --files-ignore-unknown=true --no-errors-on-unmatched {staged_files}
+      run: biome check --apply --files-ignore-unknown=true --no-errors-on-unmatched {staged_files}
+      stage_fixed: true
     shellcheck:
       glob: "*.sh"
       run: shellcheck {staged_files}
@@ -44,7 +45,7 @@ pre-push:
       run: cz check --rev-range 532ca3b25f1bee1f6dbbc16555bfc98e801416ed..HEAD
     biome-check:
       glob: "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}"
-      run: biome check --apply --files-ignore-unknown=true --no-errors-on-unmatched {push_files}
+      run: biome check --files-ignore-unknown=true --no-errors-on-unmatched {push_files}
     shellcheck:
       glob: "*.sh"
       run: shellcheck {staged_files}

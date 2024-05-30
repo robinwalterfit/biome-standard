@@ -1,42 +1,42 @@
 {
-  "author": {
-    "email": "hello@robinwalter.me",
-    "name": "Robin Walter",
-    "url": "https://robinwalter.me"
-  },
-  "bugs": {
-    "email": "hello@robinwalter.me",
-    "url": "https://github.com/robinwalterfit/biome-standard/issues"
-  },
-  "description": "A port of the StandardJS ESLint config to Biome.",
-  "devDependencies": {
-    "@evilmartians/lefthook": "1.6.14"
-  },
-  "exports": {
-    "./biome": "./biome.jsonc"
-  },
-  "homepage": "https://github.com/robinwalterfit/biome-standard",
-  "keywords": [
-    "biome",
-    "css",
-    "formatter",
-    "javascript",
-    "json",
-    "linter",
-    "standard",
-    "static-code-analysis",
-    "style-guide",
-    "typescript"
-  ],
-  "license": "(Apache-2.0 OR MIT)",
-  "name": "biome-standard",
-  "peerDependencies": {
-    "@biomejs/biome": "1.7.3"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/robinwalterfit/biome-standard.git"
-  },
+	"author": {
+		"email": "hello@robinwalter.me",
+		"name": "Robin Walter",
+		"url": "https://robinwalter.me"
+	},
+	"bugs": {
+		"email": "hello@robinwalter.me",
+		"url": "https://github.com/robinwalterfit/biome-standard/issues"
+	},
+	"description": "A port of the StandardJS ESLint config to Biome.",
+	"devDependencies": {
+		"@evilmartians/lefthook": "1.6.14"
+	},
+	"exports": {
+		"./biome": "./biome.jsonc"
+	},
+	"homepage": "https://github.com/robinwalterfit/biome-standard",
+	"keywords": [
+		"biome",
+		"css",
+		"formatter",
+		"javascript",
+		"json",
+		"linter",
+		"standard",
+		"static-code-analysis",
+		"style-guide",
+		"typescript"
+	],
+	"license": "(Apache-2.0 OR MIT)",
+	"name": "biome-standard",
+	"peerDependencies": {
+		"@biomejs/biome": "1.7.3"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/robinwalterfit/biome-standard.git"
+	},
 	"type": "module",
-  "version": "0.1.0"
+	"version": "0.1.0"
 }

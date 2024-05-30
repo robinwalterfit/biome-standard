@@ -1,11 +1,11 @@
 {
-  "recommendations": [
-    "bierner.github-markdown-preview",
+	"recommendations": [
+		"bierner.github-markdown-preview",
 		"biomejs.biome",
 		"donjayamanne.githistory",
 		"eamodio.gitlens",
 		"editorconfig.editorconfig",
 		"tamasfe.even-better-toml",
 		"timonwong.shellcheck"
-  ]
+	]
 }
