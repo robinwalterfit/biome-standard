@@ -1,0 +1,19 @@
+SPDXVersion: SPDX-2.1
+DataLicense: CC0-1.0
+PackageName: biome-standard
+DataFormat: SPDXRef-1
+PackageSupplier: Person: Robin Walter
+PackageHomePage: https://github.com/robinwalterfit/biome-standard
+PackageLicenseDeclared: Apache-2.0
+PackageLicenseDeclared: MIT
+PackageCopyrightText: 2024, Robin Walter
+PackageSummary: <text>A port of the StandardJS ESLint config to Biome.
+                </text>
+PackageComment: <text>The package includes the following libraries; see
+Relationship information.
+                </text>
+Created: 2024-05-27T17:43:00Z
+PackageDownloadLocation: git://github.com/robinwalterfit/biome-standard.git
+PackageDownloadLocation: git+https://github.com/robinwalterfit/biome-standard.git
+PackageDownloadLocation: git+ssh://github.com/robinwalterfit/biome-standard.git
+Creator: Person: Robin Walter
