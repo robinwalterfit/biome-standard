@@ -1,0 +1,15 @@
+[tool.commitizen]
+allowed_prefixes = ["[ci skip]", "Merge", "Revert", "Pull request", "fixup!", "squash!"]
+annotated_tag = true
+bump_message = "[ci skip] bump: version $current_version → $new_version"
+changelog_file = "CHANGELOG.md"
+gpg_sign = true
+major_version_zero = true
+name = "cz_conventional_commits"
+tag_format = "v$version"
+update_changelog_on_bump = true
+version = "0.0.0"
+version_files = [
+  "package.json:version",
+]
+version_scheme = "semver"
