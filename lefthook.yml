@@ -1,0 +1,50 @@
+# Configuration for lefthook itself
+assert_lefthook_installed: true
+colors: true
+no_tty: false
+output:
+  - meta           # Print lefthook version
+  - summary        # Print summary block (successful and failed steps)
+  - empty_summary  # Print summary heading when there are no steps to run
+  - success        # Print successful steps
+  - failure        # Print failed steps printing
+  - execution      # Print any execution logs (but prints if the execution failed)
+  - execution_out  # Print execution output (but still prints failed commands output)
+  - execution_info # Print `EXECUTE > ...` logging
+  - skips          # Print "skip" (i.e. no files matched)
+source_dir: .lefthook/
+
+# Command groups
+lint:
+  parallel: true
+  commands:
+    biome-lint:
+      glob: "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}"
+      run: biome lint --files-ignore-unknown=true --no-errors-on-unmatched {staged_files}
+    shellcheck:
+      glob: "*.sh"
+      run: shellcheck {staged_files}
+
+# Hooks
+commit-msg:
+  commands:
+    cz-check:
+      run: cz check --commit-msg-file {1}
+  piped: true
+
+pre-commit:
+  commands:
+    lint:
+      run: lefthook run lint
+
+pre-push:
+  parallel: true
+  commands:
+    commitizen-check-branch:
+      run: cz check --rev-range 532ca3b25f1bee1f6dbbc16555bfc98e801416ed..HEAD
+    biome-check:
+      glob: "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}"
+      run: biome check --apply --files-ignore-unknown=true --no-errors-on-unmatched {push_files}
+    shellcheck:
+      glob: "*.sh"
+      run: shellcheck {staged_files}
