@@ -14,6 +14,16 @@ Run the following command to install the Biome configuration:
 npm install git+ssh://git@github.com:robinwalterfit/biome-standard.git#v0.1.0
 ```
 
+Then add to your Biome configuration:
+
+```jsonc
+{
+	"$schema": "https://biomejs.dev/schemas/1.7.3/schema.json",
+	"extends": ["biome-standard/biome"],
+	// ... your individual configuration
+}
+```
+
 ## Deployment
 
 Currently, this package is not published on any registry. Follow the [installation instructions](#installation--getting-started),
