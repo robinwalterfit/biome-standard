@@ -25,6 +25,17 @@
       "preferred_line_length": 120,
       "tab_size": 2
     },
+    "JSONC": {
+      "code_actions_on_format": {
+        "source.fixAll": true,
+        "source.organizeImports.biome": true
+      },
+      "enable_language_server": true,
+      "format_on_save": "on",
+      "formatter": "language_server",
+      "preferred_line_length": 120,
+      "tab_size": 2
+    },
     "Markdown": {
       "preferred_line_length": 80,
       "remove_trailing_whitespace_on_save": false
