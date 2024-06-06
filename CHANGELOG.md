@@ -1,3 +1,13 @@
+## v0.2.0 (2024-06-06)
+
+### Feat
+
+- **biome**: update Biome reference version to `v1.8.0`
+
+### Refactor
+
+- **linter**: apply biome fixes to JSON files and alter lefthook configuration
+
 ## v0.1.0 (2024-05-30)
 
 ### Feat
