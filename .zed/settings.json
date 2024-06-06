@@ -1,0 +1,43 @@
+{
+  "ensure_final_newline_on_save": true,
+  "format_on_save": "language_server",
+  "hard_tabs": false,
+  "languages": {
+    "JavaScript": {
+      "code_actions_on_format": {
+        "source.fixAll": true,
+        "source.organizeImports.biome": true
+      },
+      "enable_language_server": true,
+      "format_on_save": "on",
+      "formatter": "language_server",
+      "preferred_line_length": 120,
+      "tab_size": 2
+    },
+    "JSON": {
+      "code_actions_on_format": {
+        "source.fixAll": true,
+        "source.organizeImports.biome": true
+      },
+      "enable_language_server": true,
+      "format_on_save": "on",
+      "formatter": "language_server",
+      "preferred_line_length": 120,
+      "tab_size": 2
+    },
+    "Markdown": {
+      "preferred_line_length": 80,
+      "remove_trailing_whitespace_on_save": false
+    },
+    "TOML": {
+      "ensure_final_newline_on_save": false,
+      "preferred_line_length": 120
+    },
+    "YAML": {
+      "tab_size": 2
+    }
+  },
+  "remove_trailing_whitespace_on_save": true,
+  "show_whitespaces": "selection",
+  "tab_size": 4
+}
