@@ -20,7 +20,7 @@ lint:
   commands:
     biome-lint:
       glob: "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}"
-      run: biome check --apply --files-ignore-unknown=true --no-errors-on-unmatched {staged_files}
+      run: biome check --fix --files-ignore-unknown=true --no-errors-on-unmatched {staged_files}
       stage_fixed: true
     shellcheck:
       glob: "*.sh"
