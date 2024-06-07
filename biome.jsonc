@@ -14,7 +14,7 @@
     "formatter": {
       "arrowParentheses": "always",
       "bracketSameLine": false,
-      "bracketSpacing": false,
+      "bracketSpacing": true,
       "jsxQuoteStyle": "single",
       "quoteProperties": "asNeeded",
       "quoteStyle": "single",
