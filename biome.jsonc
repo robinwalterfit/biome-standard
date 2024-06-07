@@ -11,17 +11,18 @@
     "lineWidth": 120
   },
   "javascript": {
-    "formatter": {
-      "arrowParentheses": "always",
-      "bracketSameLine": false,
-      "bracketSpacing": false,
-      "jsxQuoteStyle": "single",
-      "quoteProperties": "asNeeded",
-      "quoteStyle": "single",
-      "semicolons": "asNeeded",
-      "trailingCommas": "none"
-    }
-  },
+			"formatter": {
+				"arrowParentheses": "always",
+				"bracketSameLine": false,
+				"bracketSpacing": false,
+				"jsxQuoteStyle": "single",
+				"quoteProperties": "asNeeded",
+				"quoteStyle": "single",
+				"semicolons": "asNeeded",
+				"trailingCommas": "none"
+			},
+			"globals": ["document", "navigator", "window"]
+		},
   "json": {
     "formatter": {
       "trailingCommas": "none"
@@ -145,9 +146,6 @@
         "useValidTypeof": "error"
       }
     }
-  },
-  "javascript": {
-    "globals": ["document", "navigator", "window"]
   },
   "organizeImports": {
     "enabled": true
