@@ -1,3 +1,9 @@
+## v0.2.2 (2024-06-07)
+
+### Fix
+
+- **biome**: fix non-standard formatter setting `bracketSpacing`
+
 ## v0.2.1 (2024-06-07)
 
 ### Fix
