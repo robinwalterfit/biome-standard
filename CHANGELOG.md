@@ -1,3 +1,9 @@
+## v0.2.1 (2024-06-07)
+
+### Fix
+
+- **biome**: merge duplicate `javascript` keys
+
 ## v0.2.0 (2024-06-06)
 
 ### Feat
