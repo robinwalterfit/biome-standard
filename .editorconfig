@@ -17,7 +17,7 @@ indent_style = space
 insert_final_newline = false
 
 # JavaScript/TypeScript/JSON specific file configuration
-[*.{cjs,js,json,jsonc,jsx,mjs,ts,tsx}]
+[*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}]
 indent_size = 2
 indent_style = space
 
