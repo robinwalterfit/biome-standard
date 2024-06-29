@@ -1,5 +1,6 @@
 # Biome configuration based on Standard
 
+[![Checked with Biome](https://img.shields.io/badge/Checked_with-Biome-60a5fa?style=flat&logo=biome)](https://biomejs.dev)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](https://commitizen-tools.github.io/commitizen/)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg?style=flat-square)](https://conventionalcommits.org)
 [![lefthook](https://img.shields.io/badge/lefthook-enabled-rgb(208%2C80%2C48)?style=flat-square)](https://github.com/evilmartians/lefthook)
@@ -11,14 +12,14 @@ A port of the StandardJS ESLint configuration to Biome.
 Run the following command to install the Biome configuration:
 
 ```bash
-npm install git+ssh://git@github.com:robinwalterfit/biome-standard.git#v0.1.0
+npm install git+ssh://git@github.com:robinwalterfit/biome-standard.git#v0.3.0
 ```
 
 Then add to your Biome configuration:
 
 ```jsonc
 {
-	"$schema": "https://biomejs.dev/schemas/1.8.0/schema.json",
+	"$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
 	"extends": ["biome-standard/biome"],
 	// ... your individual configuration
 }
@@ -42,7 +43,7 @@ biome migrate eslint --include-inspired --include-nursery --write
 
 Note however, that migrate will search for a typical `.eslintrc` file. It's not
 possible to provide multiple files as input. Fortunately, multiple calls to
-`biome migrate` will end up in merging the exisiting biome configuration with
+`biome migrate` will end up in merging the existing biome configuration with
 the new rules. The next section will tell you what StandardJS configuration was
 used to generate this Biome configuration.
 
@@ -51,7 +52,7 @@ used to generate this Biome configuration.
 Run
 
 ```bash
-npm install --save-dev eslint-config-love@51.0.1 eslint-config-standard@17.1.0 eslint-config-standard-jsx@11.0.0 eslint-config-standard-react@13.0.0
+npm install --save-dev eslint-config-love@53.0.0 eslint-config-standard@17.1.0 eslint-config-standard-jsx@11.0.0 eslint-config-standard-react@13.0.0
 ```
 
 and find the packages in `node_modules`. Copy the ESLint configuration to the
@@ -73,7 +74,7 @@ file. Instead you will find a `index.js`. Copy this file and name it `.eslintrc.
   - `.gitignore` Generator: [https://gitignore.io](https://gitignore.io)
   - Lefthook: [https://github.com/evilmartians/lefthook](https://github.com/evilmartians/lefthook)
   - StandardJS: [https://standardjs.com/](https://standardjs.com/)
-    - `eslint-config-love@51.0.1`: [https://github.com/mightyiam/eslint-config-love/tree/v51.0.1](https://github.com/mightyiam/eslint-config-love/tree/v51.0.1)
+    - `eslint-config-love@53.0.0`: [https://github.com/mightyiam/eslint-config-love/tree/v53.0.0](https://github.com/mightyiam/eslint-config-love/tree/v53.0.0)
     - `eslint-config-standard@17.1.0`: [https://github.com/standard/eslint-config-standard/tree/v17.1.0](https://github.com/standard/eslint-config-standard/tree/v17.1.0)
     - `eslint-config-standard-jsx@11.0.0`: [https://github.com/standard/eslint-config-standard-jsx/tree/v11.0.0](https://github.com/standard/eslint-config-standard-jsx/tree/v11.0.0)
     - `eslint-config-standard-react@13.0.0`: [https://github.com/standard/eslint-config-standard-react/tree/v13.0.0](https://github.com/standard/eslint-config-standard-react/tree/v13.0.0)
