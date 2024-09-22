@@ -1,3 +1,9 @@
+## v0.4.0 (2024-09-22)
+
+### Feat
+
+- **biome**: update `biome` configuration to latest version `v1.9.2`
+
 ## v0.3.0 (2024-06-29)
 
 ### Feat

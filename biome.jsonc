@@ -1,5 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
+  "$schema": "https://biomejs.dev/schemas/1.9.2/schema.json",
   "formatter": {
     "attributePosition": "auto",
     "enabled": true,
@@ -47,6 +47,7 @@
         "noUselessTernary": "error",
         "noUselessThisAlias": "error",
         "noUselessTypeConstraint": "error",
+        "noUselessUndefinedInitialization": "error",
         "noVoid": "error",
         "noWith": "error",
         "useLiteralKeys": "error",
@@ -77,10 +78,6 @@
         "useIsNan": "error",
         "useJsxKeyInIterable": "error"
       },
-      "nursery": {
-        "noUselessUndefinedInitialization": "error",
-        "useConsistentBuiltinInstantiation": "error"
-      },
       "security": {
         "noDangerouslySetInnerHtml": "error",
         "noGlobalEval": "error"
@@ -98,6 +95,7 @@
             "syntax": "shorthand"
           }
         },
+        "useConsistentBuiltinInstantiation": "error",
         "useConst": "error",
         "useExportType": "error",
         "useFragmentSyntax": "error",
