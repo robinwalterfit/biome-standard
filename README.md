@@ -52,7 +52,7 @@ used to generate this Biome configuration.
 Run
 
 ```bash
-npm install --save-dev eslint-config-love@53.0.0 eslint-config-standard@17.1.0 eslint-config-standard-jsx@11.0.0 eslint-config-standard-react@13.0.0
+npm install --save-dev eslint-config-love@71.0.0 eslint-config-standard@17.1.0 eslint-config-standard-jsx@11.0.0 eslint-config-standard-react@13.0.0
 ```
 
 and find the packages in `node_modules`. Copy the ESLint configuration to the
@@ -74,7 +74,7 @@ file. Instead you will find a `index.js`. Copy this file and name it `.eslintrc.
   - `.gitignore` Generator: [https://gitignore.io](https://gitignore.io)
   - Lefthook: [https://github.com/evilmartians/lefthook](https://github.com/evilmartians/lefthook)
   - StandardJS: [https://standardjs.com/](https://standardjs.com/)
-    - `eslint-config-love@53.0.0`: [https://github.com/mightyiam/eslint-config-love/tree/v53.0.0](https://github.com/mightyiam/eslint-config-love/tree/v53.0.0)
+    - `eslint-config-love@71.0.0`: [https://github.com/mightyiam/eslint-config-love/tree/v71.0.0](https://github.com/mightyiam/eslint-config-love/tree/v71.0.0)
     - `eslint-config-standard@17.1.0`: [https://github.com/standard/eslint-config-standard/tree/v17.1.0](https://github.com/standard/eslint-config-standard/tree/v17.1.0)
     - `eslint-config-standard-jsx@11.0.0`: [https://github.com/standard/eslint-config-standard-jsx/tree/v11.0.0](https://github.com/standard/eslint-config-standard-jsx/tree/v11.0.0)
     - `eslint-config-standard-react@13.0.0`: [https://github.com/standard/eslint-config-standard-react/tree/v13.0.0](https://github.com/standard/eslint-config-standard-react/tree/v13.0.0)

@@ -10,8 +10,8 @@
   },
   "description": "A port of the StandardJS ESLint config to Biome.",
   "devDependencies": {
-    "@evilmartians/lefthook": "1.6.18",
-    "eslint-config-love": "53.0.0",
+    "@evilmartians/lefthook": "1.7.15",
+    "eslint-config-love": "71.0.0",
     "eslint-config-standard": "17.1.0",
     "eslint-config-standard-jsx": "11.0.0",
     "eslint-config-standard-react": "13.0.0"
@@ -35,7 +35,7 @@
   "license": "(Apache-2.0 OR MIT)",
   "name": "biome-standard",
   "peerDependencies": {
-    "@biomejs/biome": "1.8.3"
+    "@biomejs/biome": "1.9.2"
   },
   "repository": {
     "type": "git",
