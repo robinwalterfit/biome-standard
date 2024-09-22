@@ -42,5 +42,5 @@
     "url": "git+https://github.com/robinwalterfit/biome-standard.git"
   },
   "type": "module",
-  "version": "0.3.0"
+  "version": "0.4.0"
 }
