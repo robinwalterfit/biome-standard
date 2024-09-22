@@ -12,16 +12,16 @@ A port of the StandardJS ESLint configuration to Biome.
 Run the following command to install the Biome configuration:
 
 ```bash
-npm install git+ssh://git@github.com:robinwalterfit/biome-standard.git#v0.3.0
+npm install git+ssh://git@github.com:robinwalterfit/biome-standard.git#v0.4.0
 ```
 
 Then add to your Biome configuration:
 
 ```jsonc
 {
-	"$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
-	"extends": ["biome-standard/biome"],
-	// ... your individual configuration
+    "$schema": "https://biomejs.dev/schemas/1.9.2/schema.json",
+    "extends": ["biome-standard/biome"],
+    // ... your individual configuration
 }
 ```
 
