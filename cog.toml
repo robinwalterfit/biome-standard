@@ -1,0 +1,52 @@
+# Copyright (C) 2024 Robin Walter <hello@robinwalter.me>
+#
+# SPDX-FileCopyrightText: 2024 Robin Walter <hello@robinwalter.me>
+# SPDX-License-Identifier: MIT OR Apache-2.0
+#
+# General
+branch_whitelist = [
+  "develop",
+  "hotfix/**",
+  "main",
+  "release/**",
+]
+disable_bump_commit = true
+disable_changelog = false
+from_latest_tag = true
+ignore_merge_commits = true
+pre_bump_hooks = [
+  "echo 'Bumping from v{{latest|0.0.0}} to v{{version|0.0.1}}'",
+  "npm version {{version|0.0.1}}",
+  "git add package.json package-lock.json"
+]
+post_bump_hooks = []
+skip_ci = "[ci skip]"
+skip_untracked = true
+tag_prefix = "v"
+
+[bump_profiles]
+
+[changelog]
+authors = [
+  { signature = "Robin Walter", username = "robinwalterfit" },
+]
+owner = "robinwalterfit"
+path = "CHANGELOG.md"
+remote = "github.com"
+repository = "biome-standard"
+template = ".cog/keep_a_changelog"
+
+[commit_types]
+build = { changelog_title = "build", omit_from_changelog = true }
+chore = { changelog_title = "chore", omit_from_changelog = true }
+ci = { changelog_title = "ci", omit_from_changelog = true }
+docs = { changelog_title = "docs" }
+feat = { changelog_title = "feat" }
+fix = { changelog_title = "fix" }
+perf = { changelog_title = "perf" }
+refactor = { changelog_title = "refactor" }
+release = { bump_minor = false, bump_patch = false, changelog_title = "release", omit_from_changelog = true }
+revert = { changelog_title = "revert" }
+security = { bump_minor = false, bump_patch = true, changelog_title = "security" }
+style = { changelog_title = "style" }
+test = { changelog_title = "test", omit_from_changelog = true }
