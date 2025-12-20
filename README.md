@@ -23,7 +23,7 @@ Then add to your Biome configuration:
 
 ```jsonc
 {
-    "$schema": "https://biomejs.dev/schemas/1.9.2/schema.json",
+    "$schema": "https://biomejs.dev/schemas/2.3.10/schema.json",
     "extends": ["biome-standard/biome"],
     // ... your individual configuration
 }
