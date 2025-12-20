@@ -93,7 +93,7 @@
         "noMultiStr": "error",
         "noProto": "error",
         "noUnnecessaryConditions": "error",
-        "noUnusedExpressions": "off",
+        "noUnusedExpressions": "error",
         "useArraySortCompare": "error",
         "useExplicitType": "error",
         "useMaxParams": "error"
@@ -208,7 +208,7 @@
         "noUnsafeDeclarationMerging": "error",
         "noUnsafeNegation": "error",
         "noUselessRegexBackrefs": "error",
-        "noVar": "error",
+        "noVar": "warn",
         "noWith": "error",
         "useAdjacentOverloadSignatures": "error",
         "useDefaultSwitchClauseLast": "error",
