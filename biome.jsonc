@@ -92,6 +92,7 @@
         "noMisusedPromises": "error",
         "noMultiStr": "error",
         "noProto": "error",
+        "noUnknownAttribute": "error",
         "noUnnecessaryConditions": "error",
         "noUnusedExpressions": "error",
         "useArraySortCompare": "error",
