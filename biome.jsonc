@@ -1,5 +1,13 @@
 {
   "$schema": "https://biomejs.dev/schemas/2.3.10/schema.json",
+  "assist": {
+    "enabled": null,
+    "actions": {
+      "source": {
+        "organizeImports": "on"
+      }
+    }
+  },
   "formatter": {
     "attributePosition": "auto",
     "enabled": true,
@@ -31,14 +39,17 @@
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": false,
       "a11y": {},
       "complexity": {
+        "noAdjacentSpacesInRegex": "error",
         "noBannedTypes": "error",
+        "noCommaOperator": "error",
         "noExtraBooleanCast": "error",
         "noStaticOnlyClass": "error",
         "noUselessCatch": "error",
         "noUselessConstructor": "error",
+        "noUselessEmptyExport": "error",
+        "noUselessEscapeInRegex": "error",
         "noUselessLoneBlockStatements": "error",
         "noUselessRename": "error",
         "noUselessTernary": "error",
@@ -48,9 +59,7 @@
         "noVoid": "error",
         "useLiteralKeys": "error",
         "useOptionalChain": "error",
-        "useRegexLiterals": "error",
-        "noAdjacentSpacesInRegex": "error",
-        "noCommaOperator": "error"
+        "useRegexLiterals": "error"
       },
       "correctness": {
         "noChildrenProp": "error",
@@ -59,6 +68,7 @@
         "noEmptyCharacterClassInRegex": "error",
         "noEmptyPattern": "error",
         "noGlobalObjectCalls": "error",
+        "noInvalidBuiltinInstantiation": "error",
         "noInvalidConstructorSuper": "error",
         "noInvalidUseBeforeDeclaration": "error",
         "noPrecisionLoss": "error",
@@ -73,18 +83,36 @@
         "useHookAtTopLevel": "error",
         "useIsNan": "error",
         "useJsxKeyInIterable": "error",
-        "noInvalidBuiltinInstantiation": "error",
         "useValidTypeof": "error"
       },
+      "nursery": {
+        "noDeprecatedImports": "warn",
+        "noFloatingPromises": "error",
+        "noForIn": "error",
+        "noMisusedPromises": "error",
+        "noMultiStr": "error",
+        "noProto": "error",
+        "noUnnecessaryConditions": "error",
+        "noUnusedExpressions": "off",
+        "useArraySortCompare": "error",
+        "useExplicitType": "error",
+        "useMaxParams": "error"
+      },
+      "recommended": false,
       "security": {
+        "noBlankTarget": "error",
         "noDangerouslySetInnerHtml": "error",
-        "noGlobalEval": "error",
-        "noBlankTarget": "error"
+        "noGlobalEval": "error"
       },
       "style": {
+        "noCommonJs": "error",
         "noImplicitBoolean": "error",
+        "noInferrableTypes": "error",
+        "noMagicNumbers": "error",
         "noNamespace": "error",
         "noNonNullAssertion": "error",
+        "noYodaExpression": "error",
+        "useArrayLiterals": "error",
         "useBlockStatements": "error",
         "useConsistentArrayType": {
           "level": "error",
@@ -93,19 +121,52 @@
           }
         },
         "useConsistentBuiltinInstantiation": "error",
+        "useConsistentObjectDefinitions": "warn",
+        "useConsistentTypeDefinitions": "error",
         "useConst": "error",
         "useExportType": "error",
         "useFragmentSyntax": "error",
-        "useImportType": "error",
+        "useImportType": {
+          "level": "error",
+          "options": {
+            "style": "inlineType"
+          }
+        },
         "useNamingConvention": {
           "level": "error",
           "options": {
+            "conventions": [
+              {
+                "formats": ["camelCase", "PascalCase", "CONSTANT_CASE"],
+                "match": "_?([^_]*)_?",
+                "selector": {
+                  "kind": "variable"
+                }
+              },
+              {
+                "formats": ["camelCase", "PascalCase", "CONSTANT_CASE"],
+                "match": "_?([^_]*)_?",
+                "selector": {
+                  "kind": "function"
+                }
+              },
+              {
+                "formats": ["camelCase", "PascalCase", "CONSTANT_CASE"],
+                "match": "_?([^_]*)_?",
+                "selector": {
+                  "kind": "functionParameter"
+                }
+              }
+            ],
+            "requireAscii": false,
             "strictCase": false
           }
         },
+        "useReadonlyClassProperties": "error",
         "useShorthandFunctionType": "error",
         "useSingleVarDeclarator": "error",
-        "useArrayLiterals": "off"
+        "useSymbolDescription": "error",
+        "useThrowOnlyError": "error"
       },
       "suspicious": {
         "noAssignInExpressions": "error",
@@ -126,27 +187,36 @@
         "noDuplicateParameters": "error",
         "noEmptyBlockStatements": "error",
         "noEmptyInterface": "error",
+        "noExplicitAny": "error",
         "noExtraNonNullAssertion": "error",
         "noFallthroughSwitchClause": "error",
         "noFunctionAssign": "error",
         "noGlobalAssign": "error",
         "noImportAssign": "error",
+        "noIrregularWhitespace": "error",
         "noMisleadingCharacterClass": "error",
         "noMisleadingInstantiator": "error",
+        "noNonNullAssertedOptionalChain": "error",
+        "noOctalEscape": "error",
         "noPrototypeBuiltins": "error",
         "noRedeclare": "error",
         "noSelfCompare": "error",
         "noShadowRestrictedNames": "error",
+        "noSparseArray": "error",
+        "noTemplateCurlyInString": "error",
+        "noTsIgnore": "error",
+        "noUnsafeDeclarationMerging": "error",
         "noUnsafeNegation": "error",
-        "useDefaultSwitchClauseLast": "error",
+        "noUselessRegexBackrefs": "error",
+        "noVar": "error",
         "noWith": "error",
-        "noVar": "warn"
+        "useAdjacentOverloadSignatures": "error",
+        "useDefaultSwitchClauseLast": "error",
+        "useIterableCallbackReturn": "error"
       }
     }
   },
-  "assist": { "actions": { "source": { "organizeImports": "on" } } },
   "overrides": [
-    // Add support for Svelte
     {
       "includes": ["**/*.svelte"],
       "linter": {
