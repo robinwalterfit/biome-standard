@@ -16,7 +16,7 @@ A port of the StandardJS ESLint configuration to Biome.
 Run the following command to install the Biome configuration:
 
 ```bash
-npm install git+ssh://git@github.com:robinwalterfit/biome-standard.git#v0.4.0
+npm install git+ssh://git@github.com:robinwalterfit/biome-standard.git#v0.5.0
 ```
 
 Then add to your Biome configuration:
