@@ -384,3 +384,10 @@ lefthook-local.yaml
 
 # Local configuration directory
 .lefthook-local/
+
+### Taskfile ###
+# https://taskfile.dev/usage/#by-fingerprinting-locally-generated-files-and-their-sources
+.task/
+# Local overwrites
+Taskfile.custom.yaml
+Taskfile.custom.yml
