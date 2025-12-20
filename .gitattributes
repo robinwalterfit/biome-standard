@@ -325,5 +325,9 @@ dist/*            binary
 # Fix syntax highlighting on GitHub to allow comments
 .vscode/*.json linguist-language=JSON-with-Comments
 
+# Zed IDE
+# Fix syntax highlighting on GitHub to allow comments
+.zed/*.json linguist-language=JSON-with-Comments
+
 # Fix syntax highlighting on GitHub to allow comments
 biome.jsonc linguist-language=JSON-with-Comments

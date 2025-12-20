@@ -1,0 +1,62 @@
+---
+# Copyright (C) 2024 Robin Walter <hello@robinwalter.me>
+#
+# SPDX-FileCopyrightText: 2024 Robin Walter <hello@robinwalter.me>
+# SPDX-License-Identifier: MIT OR Apache-2.0
+
+version: "3"
+
+output: group
+
+vars:
+  VERSION:
+    sh: cog --quiet get-version --fallback '0.1.0'
+
+includes:
+  custom:
+    optional: true
+    taskfile: ./Taskfile.custom.yml
+
+tasks:
+  initialize-environment:
+    aliases: ["init"]
+    desc: Initialize development environment
+    summary: |
+      Initializes development environment
+
+      This project expects Node.js versions are managed by `fnm`. This task should be run at first to make sure
+      everything is set up and working as expected.
+    cmds:
+      - fnm use --install-if-missing
+      - npm install
+
+  pr-changelog:
+    desc: Print the changelog entries for an upcoming release
+    summary: |
+      Print the changelog entries for an upcoming release to the console.
+
+      Release management is handled by `cocogitto`. Whenever a new release is ready to be prepared, `cocogitto` creates
+      a release branch and a new Pull Request can be started. This task can be used to get the changelog entries for the
+      new version to describe the PR.
+    cmds:
+      - cog changelog HEAD..v{{.VERSION}}
+
+  update-dependencies:
+    aliases: ["update", "update:deps"]
+    desc: Update dependencies
+    summary: |
+      Update dependencies
+
+      This task invokes `npm` to update the dependencies.
+    cmds:
+      - npm update
+
+  version:
+    desc: Print the current version of Biome Standard
+    summary: |
+      Print the current version of Biome Standard.
+
+      This task invokes `cocogitto` to print the current version of Biome Standard to the console.
+    deps: []
+    cmds:
+      - "echo 'Biome Standard: v{{.VERSION}}'"

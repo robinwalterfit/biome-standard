@@ -10,7 +10,7 @@
   },
   "description": "A port of the StandardJS ESLint config to Biome.",
   "devDependencies": {
-    "@evilmartians/lefthook": "1.7.15",
+    "@evilmartians/lefthook": "2.0.12",
     "eslint-config-love": "71.0.0",
     "eslint-config-standard": "17.1.0",
     "eslint-config-standard-jsx": "11.0.0",
