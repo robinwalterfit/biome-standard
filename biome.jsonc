@@ -1,10 +1,18 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.9.2/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.3.10/schema.json",
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": "on"
+      }
+    },
+    "enabled": null
+  },
   "formatter": {
     "attributePosition": "auto",
     "enabled": true,
     "formatWithErrors": true,
-    "ignore": [],
+    "includes": ["**"],
     "indentStyle": "space",
     "indentWidth": 2,
     "lineEnding": "lf",
@@ -31,17 +39,17 @@
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": false,
-      "a11y": {
-        "noBlankTarget": "error"
-      },
+      "a11y": {},
       "complexity": {
+        "noAdjacentSpacesInRegex": "error",
         "noBannedTypes": "error",
+        "noCommaOperator": "error",
         "noExtraBooleanCast": "error",
-        "noMultipleSpacesInRegularExpressionLiterals": "error",
         "noStaticOnlyClass": "error",
         "noUselessCatch": "error",
         "noUselessConstructor": "error",
+        "noUselessEmptyExport": "error",
+        "noUselessEscapeInRegex": "error",
         "noUselessLoneBlockStatements": "error",
         "noUselessRename": "error",
         "noUselessTernary": "error",
@@ -49,7 +57,6 @@
         "noUselessTypeConstraint": "error",
         "noUselessUndefinedInitialization": "error",
         "noVoid": "error",
-        "noWith": "error",
         "useLiteralKeys": "error",
         "useOptionalChain": "error",
         "useRegexLiterals": "error"
@@ -61,9 +68,9 @@
         "noEmptyCharacterClassInRegex": "error",
         "noEmptyPattern": "error",
         "noGlobalObjectCalls": "error",
+        "noInvalidBuiltinInstantiation": "error",
         "noInvalidConstructorSuper": "error",
         "noInvalidUseBeforeDeclaration": "error",
-        "noNewSymbol": "error",
         "noPrecisionLoss": "error",
         "noSelfAssign": "error",
         "noSwitchDeclarations": "error",
@@ -72,22 +79,42 @@
         "noUnreachableSuper": "error",
         "noUnsafeFinally": "error",
         "noUnusedVariables": "error",
-        "useArrayLiterals": "off",
         "useExhaustiveDependencies": "warn",
         "useHookAtTopLevel": "error",
         "useIsNan": "error",
-        "useJsxKeyInIterable": "error"
+        "useJsxKeyInIterable": "error",
+        "useValidTypeof": "error"
       },
+      "nursery": {
+        "noDeprecatedImports": "warn",
+        "noFloatingPromises": "error",
+        "noForIn": "error",
+        "noMisusedPromises": "error",
+        "noMultiStr": "error",
+        "noProto": "error",
+        "noUnknownAttribute": "error",
+        "noUnnecessaryConditions": "error",
+        "noUnusedExpressions": "error",
+        "useArraySortCompare": "error",
+        "useExplicitType": "error",
+        "useMaxParams": "error"
+      },
+      "recommended": false,
       "security": {
+        "noBlankTarget": "error",
         "noDangerouslySetInnerHtml": "error",
+        "noDangerouslySetInnerHtmlWithChildren": "error",
         "noGlobalEval": "error"
       },
       "style": {
-        "noCommaOperator": "error",
+        "noCommonJs": "error",
         "noImplicitBoolean": "error",
+        "noInferrableTypes": "error",
+        "noMagicNumbers": "error",
         "noNamespace": "error",
         "noNonNullAssertion": "error",
-        "noVar": "warn",
+        "noYodaExpression": "error",
+        "useArrayLiterals": "error",
         "useBlockStatements": "error",
         "useConsistentArrayType": {
           "level": "error",
@@ -96,18 +123,53 @@
           }
         },
         "useConsistentBuiltinInstantiation": "error",
+        "useConsistentCurlyBraces": "error",
+        "useConsistentObjectDefinitions": "warn",
+        "useConsistentTypeDefinitions": "error",
         "useConst": "error",
         "useExportType": "error",
         "useFragmentSyntax": "error",
-        "useImportType": "error",
+        "useImportType": {
+          "level": "error",
+          "options": {
+            "style": "inlineType"
+          }
+        },
         "useNamingConvention": {
           "level": "error",
           "options": {
+            "conventions": [
+              {
+                "formats": ["camelCase", "PascalCase", "CONSTANT_CASE"],
+                "match": "_?([^_]*)_?",
+                "selector": {
+                  "kind": "variable"
+                }
+              },
+              {
+                "formats": ["camelCase", "PascalCase", "CONSTANT_CASE"],
+                "match": "_?([^_]*)_?",
+                "selector": {
+                  "kind": "function"
+                }
+              },
+              {
+                "formats": ["camelCase", "PascalCase", "CONSTANT_CASE"],
+                "match": "_?([^_]*)_?",
+                "selector": {
+                  "kind": "functionParameter"
+                }
+              }
+            ],
+            "requireAscii": false,
             "strictCase": false
           }
         },
+        "useReadonlyClassProperties": "error",
         "useShorthandFunctionType": "error",
-        "useSingleVarDeclarator": "error"
+        "useSingleVarDeclarator": "error",
+        "useSymbolDescription": "error",
+        "useThrowOnlyError": "error"
       },
       "suspicious": {
         "noAssignInExpressions": "error",
@@ -128,30 +190,38 @@
         "noDuplicateParameters": "error",
         "noEmptyBlockStatements": "error",
         "noEmptyInterface": "error",
+        "noExplicitAny": "error",
         "noExtraNonNullAssertion": "error",
         "noFallthroughSwitchClause": "error",
         "noFunctionAssign": "error",
         "noGlobalAssign": "error",
         "noImportAssign": "error",
+        "noIrregularWhitespace": "error",
         "noMisleadingCharacterClass": "error",
         "noMisleadingInstantiator": "error",
+        "noNonNullAssertedOptionalChain": "error",
+        "noOctalEscape": "error",
         "noPrototypeBuiltins": "error",
         "noRedeclare": "error",
         "noSelfCompare": "error",
         "noShadowRestrictedNames": "error",
+        "noSparseArray": "error",
+        "noTemplateCurlyInString": "error",
+        "noTsIgnore": "error",
+        "noUnsafeDeclarationMerging": "error",
         "noUnsafeNegation": "error",
+        "noUselessRegexBackrefs": "error",
+        "noVar": "warn",
+        "noWith": "error",
+        "useAdjacentOverloadSignatures": "error",
         "useDefaultSwitchClauseLast": "error",
-        "useValidTypeof": "error"
+        "useIterableCallbackReturn": "error"
       }
     }
   },
-  "organizeImports": {
-    "enabled": true
-  },
   "overrides": [
-    // Add support for Svelte
     {
-      "include": ["*.svelte"],
+      "includes": ["**/*.svelte"],
       "linter": {
         "rules": {
           "style": {
